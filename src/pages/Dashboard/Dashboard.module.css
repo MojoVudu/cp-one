@@ -1,0 +1,194 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url('../../../public/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+.header {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.topNav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: var(--white);
+    padding: 0 100px;
+}
+.topLinks a {
+    color: var(--blue);
+    font-size: .8rem;
+    margin-left: 40px;
+    font-weight: bold;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+.topLinks a:hover {
+    color: var(--dark-blue);
+}
+.logoBar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    background: var(--mid-white);
+    border-top: 1px solid var(--trans-white);
+}
+.logoBar div {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.logoBar div p {
+    margin-left: 15px;
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    font-style: italic;
+    font-weight: 700;
+}
+.logoBar .mobileMenuBar {
+    display: none;
+}
+.logo {
+    width: 7rem;
+}
+.logo:hover {
+    cursor: pointer;
+}
+.currentTime {
+    display: flex;
+    flex-direction: row;
+}
+.currentTime p {
+    font-size: .7rem;
+    color: var(--dark-blue);
+    font-weight: 500;
+    font-weight: 700;
+}
+.currentTime p:first-child {
+    font-weight: 800;
+}
+.currentTime p:nth-child(2) {
+    font-style: italic;
+}
+.navBar {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid var(--trans-white);
+    background: var(--mid-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 100px;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.1);
+}
+.navMenu {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.navMenu a {
+    text-decoration: none;
+    padding: 0 30px;
+    height: 100%;
+    color: var(--blue);
+    font-size: .9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navMenu a:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+.navPrinter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    font-size: .8rem;
+}
+.navPrinter:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+.navPrinter p {
+    margin-left: 10px;
+    font-weight: bold;
+}
+.innerContent {
+    width: 100%;
+    min-height: calc(100vh - 150px);
+    padding: 30px 100px 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 150px;
+}
+
+.activeMenuItem {
+    background: var(--dark-blue);
+    color: var(--white) !important;
+    border-bottom: 2px solid var(--grey2);
+}
+
+@media (max-width: 984px) {
+    .topNav {
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .topLinks a {
+        display: none;
+    }
+    .logoBar {
+        padding: 0 20px;
+        box-shadow: 1px 1px 3px 1px rgba(0,0,0,.1);
+    }
+    .logo {
+        width: 5.5rem;
+    }
+    .logoBar div p {
+        font-size: 1.1rem;
+    }
+    .logoBar .mobileMenuBar {
+        display: block;
+        color: var(--dark-blue);
+    }
+    .navBar {
+        display: none;
+    }
+    .innerContent {
+        min-height: calc(100vh - 100px);
+        padding: 30px 15px 70px;
+        margin-top: 100px;
+    }
+}

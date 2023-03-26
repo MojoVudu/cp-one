@@ -1,0 +1,318 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 1280px;
+}
+.topSection {
+    width: 100%;
+    border-radius: 5px;
+    /* height: 150px; */
+    background: var(--trans-white);
+    border: 1px solid rgba(0,0,0,.2);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.topSection h2 {
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+    margin: 0 0 10px 10px;
+}
+.topSection .row {
+    display: flex;
+    align-items: center;
+}
+.topSection .row select {
+    border: 1px solid rgba(0,0,0,.2);
+    width: 350px;
+    height: 40px;
+    padding: 10px 0 10px 10px;
+    border-radius: 5px;
+    outline: 0;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-right: 30px;
+    color: var(--blue);
+    font-weight: 600;
+}
+.topSection .row select:focus {
+    outline: 2px solid var(--primary);
+    cursor: pointer;
+}
+.topSection .row p {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+.topSection .row p span {
+    color: var(--grey2);
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+.topSection .link {
+    color: var(--primary);
+    font-size: .9rem;
+    color: var(--blue);
+    font-weight: 600;
+    margin: 10px 0 0 10px;
+    letter-spacing: -1px;
+    width: fit-content;
+}
+.topSection .link:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
+.lowerContentSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.txnHistory {
+    flex: 1;
+    min-width: 900px;
+    height: 700px;
+    margin-right: 50px;
+    background: var(--trans-white);
+}
+.txnHistory h3 {
+    width: 100%;
+    height: 50px;
+    background: var(--dark-blue);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: var(--white);
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.txnHistory h3 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txnHistory h3 span:hover {
+    cursor: pointer;
+    color: var(--mid-white);
+}
+.txnHistory .txnContent {
+    height: 650px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 0;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.txnEntry {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.txnEntry:first-child p{
+    color: var(--blue);
+    font-size: .9rem;
+    font-style: italic;
+    font-weight: 800 !important;
+}
+.txnEntry .leftSide {
+    display: flex;
+    flex-direction: row;
+}
+.txnEntry .rightSide {
+    display: flex;
+    flex-direction: row;
+}
+.txnEntry .rightSide p:first-child {
+    width: 180px;
+}
+.txnEntry .rightSide p:nth-child(2) {
+    width: 110px;
+}
+.txnEntry .leftSide p,
+.txnEntry .rightSide p {
+    font-size: .9rem;
+    font-weight: bold;
+}
+.txnEntry .leftSide p:first-child {
+    width: 180px;
+}
+.txnEntry .mobileRightSide {
+    display: none;
+}
+.accountSummary {
+    width: 400px;
+    min-width: 380px;
+}
+.upperSection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--white);
+}
+.upperSection p {
+    width: 100%;
+    height: 50px;
+    background: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-weight: 600;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: .9rem;
+}
+.upperSection p:nth-child(2) {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,.2);
+    color: var(--grey2);
+}
+.upperSection p:hover {
+    cursor: pointer;
+}
+.lowerSection {
+    width: 100%;
+    height: 650px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px;
+    border-top: 0;
+    background: var(--trans-white);
+}
+.entry {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.entry:nth-child(6) {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 20px;
+}
+.entry p {
+    font-size: .85rem;
+}
+.entry p:first-child {
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+.entry p:last-child {
+    font-weight: 800;
+    color: var(--grey2);
+}
+.accountService, .payInfo {
+    width: 100%;
+}
+.accountService h3, .payInfo h3 {
+    font-size: 1.1rem;
+    color: rgba(0,0,0,.4);
+    width: 100%;
+    padding: 10px 0;
+}
+.payInfo .entry {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.payInfo .entry:last-child {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 20px;
+}
+.payInfo .entry div {
+    text-align: right;
+}
+.payInfo .entry div p {
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: var(--grey2);
+}
+.accountService p {
+    width: 100%;
+    height: 30px;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: .85rem;
+    padding: 5px 0;
+}
+.accountService p:hover {
+    color: var(--grey2);
+    cursor: pointer;
+}
+
+@media (max-width: 984px) {
+    .container {
+        min-width: 100%;
+    }
+    .topSection .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .topSection .row p {
+        margin-top: 10px;
+        font-size: 1.1rem;
+    }
+    .topSection .row p span{
+        font-size: 1.1rem;
+    }
+    .topSection .link {
+        margin: 10px 0 0 0;
+    }
+    .topSection h2{
+        margin: 0 0 10px 0;
+        font-size: 1.2rem;
+    }
+    .topSection .row select {
+        font-size: .9rem;
+        width: 300px;
+    }
+    .lowerContentSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .lowerContentSection .accountSummary {
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+    }
+    .txnHistory {
+        min-width: 100%;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .txnHistory h3 span {
+        display: none;
+    }
+    .txnHistory .txnContent {
+        padding: 5px;
+    }
+    .txnEntry .leftSide p,
+    .txnEntry .mobileRightSide p {
+        font-size: .8rem;
+    }
+    .txnEntry .leftSide p:nth-child(1) {
+        width: fit-content;
+        margin-right: 70px;
+    }
+    .txnEntry .rightSide {
+        display: none;
+    }
+    .txnEntry .mobileRightSide {
+        display: block;
+    }
+}
